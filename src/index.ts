@@ -1,9 +1,8 @@
 import "express-async-errors";
-import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
-import { renderFile } from "ejs";
 import express from "express";
+import path from "path";
 
 import { errorMiddleware } from "./middlewares/errorMiddleware";
 import router from "./routes";
@@ -42,14 +41,15 @@ app.get("/status", (req, res) => {
   res.status(200).send(tempObj);
 });
 
-app.set("view engine", "html");
-app.engine("html", renderFile);
-app.set("views", "./views");
-app.use(express.static("./public"));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "./public")));
+app.use(
+  express.urlencoded({
+    extended: true,
+  }),
+);
 
-app.get("/", async (req, res) => {
-  return res.render("index");
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/index.html"));
 });
 
 app.use(errorMiddleware);
