@@ -85,3 +85,16 @@ Access the route `/api/v1` to interact with the payment API.
 In the `views` folder, there's an HTML file with an example button illustrating how to use the `/pagseguro/lightboxcode` route in the frontend. The obtained transaction code should be used to open PagSeguro Lightbox through this integration.
 
 ReadMe made with ChatGPT help
+
+### Important Links
+
+PagSeguro Transactions: https://sandbox.pagseguro.uol.com.br/transacoes.html
+- Here you can see the transactions sended through PagSeguro Lightbox
+
+PagSeguro Tokens: https://sandbox.pagseguro.uol.com.br/vendedor/configuracoes.html
+- Here you can generate your tokens
+
+PagSeguro Fake Payment Data: https://sandbox.pagseguro.uol.com.br/aplicacao/configuracoes.html
+- Here PagSeguro generate some fake credit card and personal data to use for testing
+
+Note: Maybe you have to signIn logIn in the main page of the PagSeguro Page or thoses pages will return error 404 (It's a known bug on sandbox environment)
