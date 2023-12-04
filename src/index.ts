@@ -42,11 +42,6 @@ app.get("/status", (req, res) => {
 });
 
 app.use(express.static(path.join(__dirname, "./public")));
-app.use(
-  express.urlencoded({
-    extended: true,
-  }),
-);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/index.html"));
