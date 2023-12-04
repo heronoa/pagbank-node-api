@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 
 import PagbankService from "../../services/payments";
 
-export class LightHouseController {
+export class LightboxController {
   constructor(readonly pagbankService: PagbankService = new PagbankService()) {}
 
   getCode = async (_req: Request, res: Response) => {

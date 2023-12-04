@@ -1,6 +1,6 @@
 import express, { Response } from "express";
 
-import { LightHouseController } from "../controllers/Pagbank/LightHouseController";
+import { LightboxController } from "../controllers/Pagbank/LightboxController";
 
 const router = express.Router();
 
@@ -8,9 +8,8 @@ router.get("/ping", (_req, res: Response) => {
   return res.status(200).json({ response: "pong" });
 });
 
-const lightHouseController = new LightHouseController();
+const lightboxController = new LightboxController();
 
-router.get("/pagseguro/lighthousecode", lightHouseController.getCode);
-router.post("/pagseguro/lighthousecode", lightHouseController.getCode);
+router.post("/pagseguro/lightboxcode", lightboxController.getCode);
 
 export default router;

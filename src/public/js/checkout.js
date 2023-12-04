@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 async function pagar(e) {
-  const code = await $.post("/api/v1/pagseguro/lighthousecode", "", res => {
+  const code = await $.post("/api/v1/pagseguro/lightboxcode", "", res => {
     console.log({ res });
 
     const code = res.checkout.code;
