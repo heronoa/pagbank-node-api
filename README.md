@@ -83,3 +83,5 @@ Access the route `/api/v1` to interact with the payment API.
 ## HTML Example
 
 In the `views` folder, there's an HTML file with an example button illustrating how to use the `/pagseguro/lightboxcode` route in the frontend. The obtained transaction code should be used to open PagSeguro Lightbox through this integration.
+
+ReadMe made with ChatGPT help
