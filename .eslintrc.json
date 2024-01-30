@@ -56,7 +56,7 @@
       }
     ]
   },
-  "ignorePatterns": ["/node_modules", "/.husky", "/dist", ".env"],
+  "ignorePatterns": ["/node_modules", "/.husky", "/dist", ".env", "node_modules/*"],
   "overrides": [
     {
       "files": [ "src/**/*.js" ]

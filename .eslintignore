@@ -1,5 +1,6 @@
 # folder for ignore
 
+node_modules/*
 /node_modules
 /lib
 /dist
